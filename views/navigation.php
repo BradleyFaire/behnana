@@ -2,26 +2,26 @@
 
 	<ul>
 
-		<li>Fruit
+		<li><a onhover="function()" href="#">Fruit</a>
 			<ul>
-				<li>Bananas</li>
-				<li>Coconuts</li>
-				<li>Pineapple</li>
-				<li>Mangoes</li>
+				<li><a href="#">Bananas</a></li>
+				<li><a href="#">Coconuts</a></li>
+				<li><a href="#">Pineapple</a></li>
+				<li><a href="#">Mangoes</a></li>
 			</ul>
 		</li>
-		<li>Fish
+		<li><a onhover="function()" href="#">Fish</a>
 			<ul>
-				<li>Snapper</li>
-				<li>Lobster</li>
-				<li>Mussels</li>
+				<li><a href="#">Snapper</a></li>
+				<li><a href="#">Lobster</a></li>
+				<li><a href="#">Mussels</a></li>
 			</ul>
 		</li>
-		<li>Rum
+		<li><a onhover="function()" href="#">Rum</a>
 			<ul>
-				<li>White rum</li>
-				<li>Dark rum</li>
-				<li>Coconut rum</li>
+				<li><a href="#">White rum</a></li>
+				<li><a href="#">Dark rum</a></li>
+				<li><a href="#">Coconut rum</a></li>
 			</ul>
 		</li>
 
