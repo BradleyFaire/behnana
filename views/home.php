@@ -1,5 +1,4 @@
 <div class="main">
-	<p>This is the ugly hard coded home page!</p>
-
-	<p>WEEEE!!!</p>
+	<img src="assets/img/island.jpg" alt="Tropical Island">
+	<div class="browseButton">Browse Products</div>
 </div>
