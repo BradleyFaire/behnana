@@ -12,8 +12,8 @@
 class Config{
 
 	public static $hostname = 'localhost';
-	public static $username = 'emmagerl_admin';
+	public static $username = 'bradleyf_admin';
 	public static $password = 'admin';
-	public static $database = 'emmagerl_cart';
+	public static $database = 'bradleyf_behnana';
 
 }
