@@ -7,5 +7,6 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Behnana</h1>
-	</div>
+		<header>
+			<h1>Behnana</h1>
+		</header>
