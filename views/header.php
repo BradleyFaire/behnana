@@ -9,10 +9,10 @@
 <body>
 	<div class="container">
 		<header>
-			<div class="col-8">
+			<div class="col-10">
 				<h1>Behnana</h1>
 			</div>
-			<div class="cart col-4">
+			<div class="cart col-2">
 				<a href="#">
 					Cart
 				</a>
