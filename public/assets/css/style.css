@@ -69,11 +69,15 @@ header{
   overflow: hidden;
 }
 
+header h1 a{
+	text-decoration: none;
+	color: #FFF691;
+	font-size: 1.2em;
+	font-family: 'Lobster', sans-serif;
+}
+
 header h1{
 	margin: 0;
-	color: #FFF691;
-	font-size: 2.5em;
-	font-family: 'Lobster', sans-serif;
 }
 
 #nav{
@@ -100,7 +104,8 @@ nav ul li{
 
 .login ul li{
 	display: inline;
-	float: right;
+	float: left;
+	text-align: right;
 }
 
 nav ul li,
@@ -122,8 +127,9 @@ nav > ul > li > a,
 nav ul ul{
 	position: absolute;
 	margin-top: 0.2em;
-	display: none;
-	width: 0;
+	display: block;
+	height: 0;
+	overflow: hidden;
 }
 
 nav ul li ul li a{
@@ -145,14 +151,16 @@ nav ul li a:hover, a:focus,
 }*/
 
 nav ul li:hover > ul{
-	display: block;
-	width: 160px;
+	height: 1000%;
 }
 
 nav ul li ul li{
 	padding-right: 0;
 	float: none;
 	background-color: #00a1df;
+	border-top: 1px solid #33b4e5;
+	border-bottom: 1px solid #0079a7;
+	opacity: 0.8;
 	margin: 0;
 	padding: 1em;
 }
@@ -179,12 +187,17 @@ nav ul li ul li{
 }
 
 .cart{
-	position: absolute;
-	top: 25px;
-	right: 0px;
+	margin: 1.5em 0 0;
 }
 
 .cart a{
 	color: #f9f19b;
 	text-decoration: none;
+}
+
+.line{
+	overflow: hidden;
+	background: #05bc87;
+	height: 1px;
+	width: 100%;
 }

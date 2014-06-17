@@ -7,14 +7,15 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<div class="container">
-		<header>
+	<header>
+		<div class="container">
 			<div class="col-10">
-				<h1>Behnana</h1>
+				<h1><a href="index.php">Behnana<a></h1>
 			</div>
 			<div class="cart col-2">
 				<a href="#">
 					Cart
 				</a>
 			</div>
-		</header>
+		</div>
+	</header>
