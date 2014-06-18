@@ -12,19 +12,25 @@ require_once '../libraries/model.lib.php';
 
 include '../views/header.php';
 include '../views/navigation.php';
+
 if($_GET['login'] == true){
 
 	include '../views/login.php';
 
 }else if($_GET['category_id'] == true){
 
-	include '../views/product_list.php?category_id='.$_GET['category_id'];
+	include '../views/product_list.php';
 
 }else if($_GET['product_id'] == true){
 
-	include '../views/product_info.php?product_id='.$_GET['product_id'];
+	include '../views/product_info.php';
+
+}else if($_GET['cart'] == true){
+
+	include '../views/cart.php';
 
 }else{
 	include '../views/home.php';
 }
+
 include '../views/footer.php';
