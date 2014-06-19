@@ -7,8 +7,12 @@ session_start();
 
 class Login{
 
-	public function log_in(){
-		$_SESSION['logged_in'] = true;
+	public function admin_log_in(){
+		$_SESSION['admin_logged_in'] = true;
+	}
+
+	public function customer_log_in(){
+		$_SESSION['customer_logged_in'] = true;
 	}
 
 	public function log_out(){

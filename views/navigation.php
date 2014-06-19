@@ -29,7 +29,7 @@
 		</ul>
 
 		<ul class="col-4 login">
-			<li><a href="index.php?login=1">Login</a></li>
+			<li><a href="login_page.php">Login</a></li>
 			<li><a href="#">Register</a></li>
 		</ul>
 

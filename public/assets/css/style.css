@@ -194,8 +194,8 @@ nav ul ul{
 	position: absolute;
 	margin-top: 0.2em;
 	display: block;
-	height: 0;
 	overflow: hidden;
+	display: none;
 }
 
 nav ul li ul li a{
@@ -217,7 +217,7 @@ nav ul li a:hover, a:focus,
 }*/
 
 nav ul li:hover > ul{
-	height: 1000%;
+	display: block;
 }
 
 nav ul li ul li{
@@ -229,6 +229,13 @@ nav ul li ul li{
 	opacity: 0.8;
 	margin: 0;
 	padding: 1em;
+}
+
+nav ul li ul li a{
+}
+
+nav ul li:hover ul li a{
+	
 }
 
 .main{
