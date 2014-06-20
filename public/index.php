@@ -7,6 +7,8 @@ require_once '../libraries/form.lib.php';
 require_once '../libraries/hash.lib.php';
 require_once '../libraries/login.lib.php';
 require_once '../libraries/model.lib.php';
+require_once '../models/product_list.collection.php';
+require_once '../models/category.collection.php';
 
 
 

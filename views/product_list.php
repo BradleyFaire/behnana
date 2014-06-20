@@ -1,54 +1,32 @@
 <div class="main col-12">
 
-	<h1><a href="#">Fruit</a></h1>
+	<?php
 
-	<div class="col-product listedproduct">
-		<h2>Bananas</h2>
-		<img src="assets/img/fruit_banana.png" class="thumbnail" alt="">
-		<div class="price">
-			$5.00 ea
-		</div> 
-		<form>
-			<input type="number" value="0">
-			<input type="submit">
-		</form>
-	</div>
-	<div class="col-product listedproduct">
-		<h2>Coconuts</h2>
-		<img src="assets/img/fruit_coconut.png" class="thumbnail" alt="">
-		<div class="price">
-			$5.00 ea
-		</div> 
+	$p = new Product_list($_GET['category_id']);
 
-		<form>
-			<input type="number" value="0">
-			<input type="submit">
-		</form>
-	</div>
-	<div class="col-product listedproduct">
-		<h2>Pineapples</h2>
-		<img src="assets/img/fruit_pineapple.png" class="thumbnail" alt="">
-		<div class="price">
-			$5.00 ea
-		</div> 
+	$c = new model('tb_categories');
+	$c->load($_GET['category_id']);
 
-		<form>
-			<input type="number" value="0">
-			<input type="submit">
-		</form>
-	</div>
-	<div class="col-product listedproduct">
-		<h2>Mangoes</h2>
-		<img src="assets/img/fruit_mango.png" class="thumbnail" alt="">
-		<div class="price">
-			$5.00 ea
-		</div> 
+	$n = $p->count_items();
 
-		<form>
-			<input type="number" value="0">
-			<input type="submit">
-		</form>
-	</div>
 
+	?>
+
+	<h1><?=$c->name?></h1>
+	<!-- shows all the products things on the listy -->
+	<? foreach($p->items as $prod): ?>
+		<div class="col-product listedproduct">
+
+			<a href="index.php?product_id=<?=$prod['id']?>"><h2><?=$prod['name']?></h2></a>
+			<a href="index.php?product_id=<?=$prod['id']?>"><img src="<?=$prod['image']?>" class="thumbnail" alt=""></a>
+			<div class="price">$<?=$prod['price']?> each</div>
+
+			<?=Form::open('add_to_cart.php')?>
+				<?=Form::hidden('id', $prod['id'])?>
+				<?=Form::number('quantity', '1','min="1"')?>
+				<?=Form::submit('Order')?>
+			<?=Form::close()?>
+		</div>
+	<? endforeach; ?>
 
 </div>

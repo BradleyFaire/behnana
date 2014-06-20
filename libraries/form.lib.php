@@ -186,8 +186,8 @@ class Form{
 	*	@return string $html The completed <input type="submit"> tag
 	*
 	**/
-	public static function submit($text = 'Submit'){
-		$html = self::input('submit', '', $text);
+	public static function submit($text = 'Submit', $extras = ''){
+		$html = self::input('submit', '', $text, $extras);
 		return $html;
 	}
 	/**
