@@ -18,7 +18,7 @@
 		<div class="col-product listedproduct">
 
 			<a href="index.php?product_id=<?=$prod['id']?>"><h2><?=$prod['name']?></h2></a>
-			<a href="index.php?product_id=<?=$prod['id']?>"><img src="<?=$prod['image']?>" class="thumbnail" alt=""></a>
+			<a href="index.php?product_id=<?=$prod['id']?>"><img src="<?=$prod['thumbnail']?>" class="thumbnail" alt=""></a>
 			<div class="price">$<?=$prod['price']?> each</div>
 
 			<?=Form::open('add_to_cart.php')?>
