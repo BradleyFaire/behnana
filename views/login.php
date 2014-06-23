@@ -1,11 +1,15 @@
 <div class="login">
 	<h2>Login:</h3>
 
+	<?php if($error): ?>
+	<p class="error"><?=$error?></p>
+	<?php endif; ?>
+
 	<?=Form::open()?>
 		
 		<div class="row">
-			<?=Form::label('email', 'Email:')?>
-			<?=Form::input('text', 'email', $_POST['email'])?>
+			<?=Form::label('username', 'Username:')?>
+			<?=Form::input('text', 'username', $_POST['username'])?>
 		</div>
 
 		<div class="row">

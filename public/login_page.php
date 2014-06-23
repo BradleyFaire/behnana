@@ -9,6 +9,8 @@ require_once '../libraries/login.lib.php';
 require_once '../libraries/model.lib.php';
 require_once '../libraries/admin.lib.php';
 require_once '../libraries/customer.lib.php';
+require_once '../models/category.collection.php';
+require_once '../models/product_list.collection.php';
 
 if($_POST){
 
@@ -31,7 +33,7 @@ if($_POST){
 		header('location: index.php');
 		exit;
 	}else{
-		$error = 'Incorrect username or password OR No input';
+		$error = 'Incorrect username, password or no input';
 	}
 }
 
