@@ -16,27 +16,40 @@ Login::kickout();
 
 $form = new Form();
 
-$category = new Model('tb_categories');
+$product = new Model('tb_products');
 
-if($_GET['category_id']){
-	$category->load($_GET['category_id']);
+$cat = $_GET['category_id'];
+
+if($_GET['product_id']){
+
+	$product->load($_GET['product_id']);
+
+	$image = $product->image;
+	$thumbnail = $product->thumbnail;
 	
-	$title = 'Edit Category';
+	$title = 'Edit Product';
 }
 else{
-	$title = 'Create Category';
+	$title = 'Create Product';
+	$image = 'assets/img/';
+	$thumbnail = 'assets/img/small_';
 }
 
 #If the form was just posted
 if($_POST){
 
-	$category->name = $_POST['name'];
-	$category->save();
-	header("location: add_category.php?category_id=$category->id");
+	$product->name = $_POST['name'];
+	$product->description = $_POST['description'];
+	$product->price = $_POST['price'];
+	$product->image = $_POST['image'];
+	$product->thumbnail = $_POST['thumbnail'];
+	$product->category_id = $cat;
+	$product->save();
+	header("location: add_product.php?product_id=$product->id&category_id=$cat");
 	exit;
 }
 
 include '../views/header.php';
 include '../views/navigation.php';
-include '../views/edit_category.php';
+include '../views/edit_product.php';
 include '../views/footer.php';

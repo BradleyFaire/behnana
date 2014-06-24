@@ -22,12 +22,17 @@ class Login{
 
 	public function kickout(){
 		if($_SESSION['admin_logged_in'] == false){
-			header('location: login.php');
+			header('location: login_page.php');
 			exit;
 		}
 	}
 
-	public function is_logged_in(){
-		return $_SESSION['logged_in'];
+	public function not_customer(){
+		if($_SESSION['admin_logged_in'] == false){
+			if($_SESSION['customer_logged_in'] == false){
+				header('location: login_page.php');
+				exit;
+			}
+		}
 	}
 }

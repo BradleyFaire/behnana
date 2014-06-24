@@ -23,8 +23,8 @@
 
 			<?=Form::open('add_to_cart.php')?>
 				<?=Form::hidden('id', $prod['id'])?>
-				<?=Form::number('quantity', '1','min="1"')?>
-				<?=Form::submit('Order')?>
+				<?=Form::number('quantity', '1','min="1" class="list"')?>
+				<?=Form::submit('Order', 'class="listsub"')?>
 			<?=Form::close()?>
 		</div>
 	<? endforeach; ?>

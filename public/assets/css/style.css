@@ -164,7 +164,7 @@ h2{
 	overflow: hidden;
 }
 
-input[type=number]{
+.listedproduct input[type=number]{
 	height: 30px;
 	width: 35%;
 	border-radius: 15px;
@@ -173,17 +173,29 @@ input[type=number]{
 	clear: both;
 }
 
+.product{
+	width: 50%;
+}
+
 input[type=submit],
-.login button{
-	width: 57%;
+button{
+	margin: 0.25em 0;
 	font-weight: 300;
 	background: #05bc87;;
 	color: #fff;
 	border: 1px solid #05bc87;
 	border-radius: 10px;
 	outline: none;
-	margin-left: 7px;
 	clear: both;
+}
+
+.login input[type=submit], .register, .update, .create{
+	width: 175px;
+}
+
+.listsub{
+	width: 58%;
+	margin-left: 0.5em !important;
 }
 
 /*nav ul:after{
@@ -194,6 +206,10 @@ input[type=submit],
 
 nav ul li{
 	float: left;
+}
+
+nav ul li.extranav{
+	float: right;
 }
 
 .login ul li{
@@ -315,8 +331,10 @@ nav ul li:hover ul li a{
 }
 
 .cart a{
+	float: right;
 	text-decoration: none;
 	display: block;
+	width: 94%;
 	background: #FFF691;
 	color: #05bc87;
 	text-align: center;
@@ -371,41 +389,35 @@ td input[type=number]{
 	margin-top: 1em;
 }
 
-.login label{
+label{
 	display: block;
 }
 
-.login input[type=text],
-.login input[type=password]{
+input[type=text],
+input[type=password]{
 	margin: 0.5em 0;
 }
 
-.login input[type=submit],
-.login button{
-	margin: 0.25em 0;
-	width: 150px;
-}
-
-.login button{
+button{
 	background: #FFF691;
 	color: #05bc87;
 	position: relative;
 }
 
-.login input[type=submit]:hover{
+input[type=submit]:hover{
 	background: #29d9a6;
 }
 
-.login input[type=submit]:active{
+input[type=submit]:active{
 	top: 1px;
 	background: #289878;
 }
 
-.login button:hover{
+button:hover{
 	background: #fef04f;
 }
 
-.login button:active{
+button:active{
 	top: 1px;
 	background: #e0d878;
 }

@@ -1,5 +1,5 @@
 <div class="login">
-	<h2>Login:</h3>
+	<h2>Register:</h3>
 
 	<?php if($error): ?>
 	<p class="error"><?=$error?></p>
@@ -18,13 +18,14 @@
 		</div>
 
 		<div class="row">
-			<?=Form::submit('Login')?>
+			<?=Form::label('confirmpassword', 'Confirm Password:')?>
+			<?=Form::input('password', 'confirmpassword')?>
+		</div>
+
+		<div class="row">
+			<?=Form::submit('Register', '')?>
 		</div>
 
 	<?=Form::close()?>
-
-	<div class="row">
-		<a href="register.php"><button class="register">Register</button></a>
-	</div>
 
 </div>
