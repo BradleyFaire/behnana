@@ -89,7 +89,7 @@ class Model{
 				->update($this->table);
 		}
 
-		echo $this->db->last_query;
+		// echo $this->db->last_query;
 
 	}
 
@@ -98,13 +98,13 @@ class Model{
 	}
 
 	public function soft_delete(){
-		$this->fields['deleted'] = 1;
+		$this->data['deleted'] = 1;
 		$this->save();
 	}
 
 	public function hard_delete(){
 		$this->db
-			->where('id', $this->fields['id'])
+			->where('id', $this->data['id'])
 			->delete();
 	}
 

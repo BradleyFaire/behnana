@@ -20,6 +20,23 @@ body{
 	font-smoothing: antialiased;
 }
 
+.circle{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #00A0DF;
+}
+
+.istyle{
+ 	color: white; 
+ 	padding: 3px 0 0 5px;
+}
+
+.addthing{
+	color: white;
+}
+
 .row{
 	display: block;
 	margin: 0.5em auto;

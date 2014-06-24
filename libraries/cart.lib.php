@@ -11,11 +11,10 @@ class Cart{
 		self::create_cart();
 
 		#if the product is already in the cart
-		if(isset($_SESSION['cart']['id'])){
+		if(isset($_SESSION['cart'][$id])){
 			#increase the quantity
 			$_SESSION['cart'][$id] += intval($qty);
-		}
-		else{
+		}else{
 			#or else set the quantity
 			$_SESSION['cart'][$id] = intval($qty);
 		}
@@ -40,6 +39,7 @@ class Cart{
 
 	public static function create_cart(){
 
+		#checks if cart has been created within the session, if there is no cart in the session, isset will equal false, and the code will create a cart in the session that is an array.
 		if(isset($_SESSION['cart']) == false){
 			$_SESSION['cart'] = array();
 		}

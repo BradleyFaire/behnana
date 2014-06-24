@@ -23,10 +23,6 @@ if($_GET['category_id'] == true){
 
 	include '../views/product_info.php';
 
-}else if($_GET['cart'] == true){
-
-	include '../views/cart.php';
-
 }else{
 	include '../views/home.php';
 }

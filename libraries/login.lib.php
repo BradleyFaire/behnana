@@ -16,11 +16,12 @@ class Login{
 	}
 
 	public function log_out(){
-		$_SESSION['logged_in'] = false;
+		$_SESSION['admin_logged_in'] = false;
+		$_SESSION['customer_logged_in'] = false;
 	}
 
 	public function kickout(){
-		if($_SESSION['logged_in'] == false){
+		if($_SESSION['admin_logged_in'] == false){
 			header('location: login.php');
 			exit;
 		}

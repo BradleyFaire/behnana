@@ -12,32 +12,20 @@ require_once '../libraries/customer.lib.php';
 require_once '../models/category.collection.php';
 require_once '../models/product_list.collection.php';
 
+Login::kickout();
+
+$form = new Form();
+$title = 'Create Category';
+
+#If the form was just posted
 if($_POST){
+	$category = new Model('tb_categories');
 
-	$admin = new Admin();
-
-	$admin->username = $_POST['username'];
-	$admin->password = $_POST['password'];
-
-	$customer = new Customer();
-
-	$customer->username = $_POST['username'];
-	$customer->password = $_POST['password'];
-
-	if($admin->authenticate()){
-		Login::admin_log_in();
-		header('location: index.php');
-		exit;
-	}else if($customer->authenticate()){
-		Login::customer_log_in();
-		header('location: index.php');
-		exit;
-	}else{
-		$error = 'Incorrect username, password or no input';
-	}
+	$category->name = $_POST['name'];
+	$category->save();
 }
 
 include '../views/header.php';
 include '../views/navigation.php';
-include '../views/login.php';
+include '../views/edit_category.php';
 include '../views/footer.php';
