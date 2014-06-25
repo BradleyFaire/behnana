@@ -15,7 +15,7 @@ $p->load($_GET['product_id']);
 			$<?=$p->price?> each
 		</div> 
 		<?=Form::open('add_to_cart.php')?>
-			<?=Form::hidden('id', $prod['id'])?>
+			<?=Form::hidden('id', $p->id)?>
 			<div class="col-3">
 				<?=Form::number('quantity', '1','min="1" style="width: 100%"')?>
 			</div>

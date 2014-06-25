@@ -21,12 +21,23 @@ class Category_model extends Model{
 	}
 
 	public function list_categories(){
-		$stuff = $this->db
+		$this->data = $this->db
 		->select('*')
-		->from('tb_categories')
+		->from($this->table)
 		->where('deleted', '0') //if they are ot deleted. Deleted =0
 		->get();
-		return $stuff;
+		return $this->data;
+	}
+
+	public function list_names(){
+
+		$result = $this->db
+			->select('name')
+			->from($this->table)
+			->where('deleted', '0')
+			->get();
+			$this->data = $result;
+
 	}
 
 }

@@ -10,6 +10,7 @@ require_once '../libraries/model.lib.php';
 require_once '../models/product_list.collection.php';
 require_once '../models/category.collection.php';
 
+
 Login::not_customer();
 
 #creates an empty array that will filled with the information collected by the loop.
