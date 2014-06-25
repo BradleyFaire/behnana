@@ -10,7 +10,7 @@ require_once '../libraries/model.lib.php';
 require_once '../models/product_list.collection.php';
 require_once '../models/category.collection.php';
 
-
+#Cannot view this page unless you are logged in as a customer
 Login::not_customer();
 
 #creates an empty array that will filled with the information collected by the loop.

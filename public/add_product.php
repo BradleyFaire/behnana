@@ -12,9 +12,12 @@ require_once '../libraries/customer.lib.php';
 require_once '../models/category.collection.php';
 require_once '../models/product_list.collection.php';
 
+//Protects the page so can only be seen when you are logged in as admin
 Login::kickout();
 
-$form = new Form();
+#Creates new instance based on the form library
+// $form = new Form();
+
 
 $product = new Model('tb_products');
 

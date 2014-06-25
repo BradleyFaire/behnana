@@ -3,47 +3,47 @@
 
 	<div class="product">
 
-	<?=$form->open()?>
+	<?=Form::open()?>
 
 		<div class="row">
-			<?=$form->label('name', 'Name:')?>
-			<?=$form->input('text', 'name', $product->name)?>
+			<?=Form::label('name', 'Name:')?>
+			<?=Form::input('text', 'name', $product->name)?>
 		</div>
 
 		<div class="row">
-			<?=$form->label('description', 'Description:')?>
-			<?=$form->textarea('description', $product->description)?>
+			<?=Form::label('description', 'Description:')?>
+			<?=Form::textarea('description', $product->description)?>
 		</div>
 
 		<div class="row">
-			<?=$form->label('price', 'Price:')?>
-			<?=$form->number('price', $product->price)?>
+			<?=Form::label('price', 'Price:')?>
+			<?=Form::number('price', $product->price)?>
 		</div>
 
 		<div class="row">
-			<?=$form->label('image', 'Image:')?>
-			<?=$form->input('text', 'image', $image)?>
+			<?=Form::label('image', 'Image:')?>
+			<?=Form::input('text', 'image', $image)?>
 		</div>
 
 		<div class="row">
-			<?=$form->label('thumbnail', 'Thumbnail:')?>
-			<?=$form->input('text', 'thumbnail', $thumbnail)?>
+			<?=Form::label('thumbnail', 'Thumbnail:')?>
+			<?=Form::input('text', 'thumbnail', $thumbnail)?>
 		</div>
 
 		<div class="row">
 			
 			<? if ($_GET['product_id']): ?>
 
-				<?=$form->submit('Update', 'class="update"')?>
+				<?=Form::submit('Update', 'class="update"')?>
 
 				<a href="../public/delete_product.php?product_id=<?=$_GET['product_id']?>" class="circle"><i class="istyle fa fa-times" style="color: white;"></i></a>
 
 			<? else: ?>
-				<?=$form->submit('Create', 'class="create"')?>
+				<?=Form::submit('Create', 'class="create"')?>
 			<? endif; ?>
 		</div>
 
-		<?=$form->close()?>
+		<?=Form::close()?>
 
 	</div>
 </div>
