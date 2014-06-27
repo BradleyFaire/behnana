@@ -9,8 +9,9 @@
 	</div>
 
 	<div class="row">
-		
+		<!-- if there is a category_id in the url -->
 		<? if ($_GET['category_id']): ?>
+			
 			<?=Form::submit('Update', 'class="update"')?>
 			<a href="../public/delete_category.php?category_id=<?=$_GET['category_id']?>" class="circle"><i class="istyle fa fa-times" style="color: white;"></i></a>
 		<? else: ?>

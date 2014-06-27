@@ -25,9 +25,11 @@
 				<a href="index.php?product_id=<?=$prod['id']?>"><img src="<?=$prod['thumbnail']?>" class="thumbnail" alt=""></a>
 
 				<div class="price">$<?=$prod['price']?> each</div>
-
+				
+				<!-- open up a form that will add stuff to the cart-->
 				<?=Form::open('add_to_cart.php')?>
-
+				
+					<!-- secretly include the product id-->
 					<?=Form::hidden('id', $prod['id'])?>
 					<?=Form::number('quantity', '1','min="1"')?>
 					<?=Form::submit('Order')?>

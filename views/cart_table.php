@@ -9,8 +9,9 @@
 			<th width="150">Total Price</th>
 			<th></th>
 		</tr>
+		<!-- if there are some products in the cart -->
 		<?php if(count($cart_products)): ?>
-
+			<!-- for each product in cart_products do all this -->
 			<?php foreach($cart_products as $product): ?>
 				<tr>
 					
@@ -29,7 +30,7 @@
 
 				</tr>
 			<?php endforeach; ?>
-
+		<!-- if there are no products in the cart-->
 		<?php else: ?>
 
 			<tr>

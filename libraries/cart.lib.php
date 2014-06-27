@@ -25,7 +25,7 @@ class Cart{
 		self::create_cart();
 
 		$amount = 0;
-
+		# Add all the quantities to the total amount
 		foreach($_SESSION['cart'] as $quantity){
 			$amount += $quantity;
 		}
@@ -49,6 +49,7 @@ class Cart{
 	public static function set_quantity($id, $qty){
 		self::create_cart();
 
+		# make the cart's id equal to the quantity
 		$_SESSION['cart'][$id] = intval($qty);
 	}
 }

@@ -64,6 +64,7 @@ class Model{
 
 	# Normal Methods --------------------------------
 
+	# find and get select all info from this id in the db
 	public function load($id){
 		$result = $this->db
 			->select('*')

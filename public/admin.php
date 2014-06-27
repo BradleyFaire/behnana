@@ -10,8 +10,6 @@ require_once '../libraries/model.lib.php';
 require_once '../models/category.collection.php';
 require_once '../models/product_list.collection.php';
 
-
-
 include '../views/header.php';
 include '../views/navigation.php';
 
